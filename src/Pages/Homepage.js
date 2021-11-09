@@ -1,7 +1,7 @@
 import React from "react";
 
 const Homepage = () => {
-  return <div>Polotic Consultorio</div>;
+  return <div>Dashboard</div>;
 };
 
 export default Homepage;
