@@ -1,7 +1,7 @@
 import React from "react";
 
 const Navbar = () => {
-  return <div>Mobile Navbar</div>;
+  return <div className="mobile-navbarContainer"></div>;
 };
 
 export default Navbar;
