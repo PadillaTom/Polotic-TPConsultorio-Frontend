@@ -4,9 +4,11 @@ import "./CSS/index.css";
 
 import { App } from "./Components/App";
 
+import { EventsProvider } from "./Context/EventsContext";
+
 ReactDOM.render(
-  <React.StrictMode>
+  <EventsProvider>
     <App />
-  </React.StrictMode>,
+  </EventsProvider>,
   document.getElementById("root")
 );

@@ -19,8 +19,11 @@ $font-primary: 'Inter', sans-serif
 $font-secondary: 'Open Sans', sans-serif
 /* Colors */
 $color-bg-fa: #fafafa
-/* Transitions */
-$main-trans: 0.3s linear all
+/* Utils */
+$trans-03: 0.3s linear all
+$trans-02: 0.2s linear all
+$trans-015: 0.15s linear all
+$shadow-1: 0px 0px 15px #dfdfdfa1
 
 // ---> GLOBALS <---
 *
@@ -41,10 +44,56 @@ a
 /* ======================================================================== */
 /* Navbar */
 /* ======================================================================== */
-
+.navbar-container
+    background: white
+    box-shadow: $shadow-1
+    width: 100%
+    height: 4rem
+    position: fixed
+    top: 0
+    left: 0
+    .navbar-center
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 85%
+        height: 100%
+        margin: 0 auto
+        .navbar-left
+            .nl-menu-icon
+                font-size: 1.5rem
+        .navbar-right
+            .navbar-right-container
+                width: 4rem
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .nr-menu-notifications
+                    font-size: 1.5rem
+                .nr-menu-user
+                    font-size: 1.5rem
 /* ======================================================================== */
 /* Sidebar */
 /* ======================================================================== */
+.sidebar
+    width: 75%
+    height: 100vh
+    background: blue
+    position: fixed
+    top: 0
+    left: 0
+    transform: translate(-100%)
+    transition: $trans-015
+.show-sidebar
+    transform: translate(0)
+    z-index: 1000
+
+// MAIN SCREEN MOBILE
+.main-layout-mobile
+    padding-top: 4.55rem
+    width: 90%
+    margin: 0 auto
 
 /* ======================================================================== */
 /* 1. Login Screen */
