@@ -68,9 +68,9 @@ a {
 /* Sidebar */
 /* ======================================================================== */
 .sidebar {
-  width: 75%;
+  width: 78%;
   height: 100vh;
-  background: blue;
+  background: #111827;
   position: fixed;
   top: 0;
   left: 0;
@@ -81,6 +81,70 @@ a {
 .show-sidebar {
   transform: translate(0);
   z-index: 1000;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.sidebar-top .sb-top-logo-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.7rem 0rem;
+  width: 75%;
+  margin: 0 auto;
+}
+.sidebar-top .sb-top-logo-close .sb-top-logo {
+  color: #fafafa;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.sidebar-top .sb-top-logo-close .sb-top-close {
+  color: white;
+  font-size: 1.7rem;
+}
+.sidebar-top .sb-top-account {
+  width: 85%;
+  height: 5.2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #ffffff10;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.7rem;
+}
+.sidebar-top .sb-top-account .acc-img {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+  color: white;
+  opacity: 0.8;
+}
+.sidebar-top .sb-top-account .acc-info {
+  margin-left: 5%;
+  font-family: "Open Sans", sans-serif;
+}
+.sidebar-top .sb-top-account .acc-info h3 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  color: white;
+}
+.sidebar-top .sb-top-account .acc-info p {
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.7;
+}
+
+.sidebar-links {
+  color: white;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .singleLink-container {
@@ -107,6 +171,9 @@ a {
   margin-left: 0.75rem;
 }
 
+/* ======================================================================== */
+/* Layout */
+/* ======================================================================== */
 .main-layout-mobile {
   padding-top: 4.55rem;
   width: 90%;

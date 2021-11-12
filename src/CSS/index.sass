@@ -19,6 +19,17 @@ $font-primary: 'Inter', sans-serif
 $font-secondary: 'Open Sans', sans-serif
 /* Colors */
 $color-bg-fa: #fafafa
+$color-blue-lightest: #94D2BD
+$color-blue-light: #0A9396
+$color-blue-mid: #005F73
+$color-blue-semidark: rgb(17, 24, 39)
+$color-blue-dark: #001219
+$color-orange-light: #E9D8A6
+$color-orange-mid: #EE9B00
+$color-orange-dark: #CA6702
+$color-red-light: #BB3E03
+$color-red-mid: #AE2012
+$color-red-dark: #9B2226
 /* Utils */
 $trans-03: 0.3s linear all
 $trans-02: 0.2s linear all
@@ -80,9 +91,9 @@ a
 /* Sidebar */
 /* ======================================================================== */
 .sidebar
-    width: 75%
+    width: 78%
     height: 100vh
-    background: blue
+    background: $color-blue-semidark
     position: fixed
     top: 0
     left: 0
@@ -91,6 +102,60 @@ a
 .show-sidebar
     transform: translate(0)
     z-index: 1000
+// Layout:    
+.sidebar-top
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    .sb-top-logo-close
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 1.7rem 0rem
+        width: 75%
+        margin: 0 auto
+        .sb-top-logo
+            color: $color-bg-fa
+            font-family: $font-secondary
+            letter-spacing: 1px
+            font-size: 1.5rem
+            font-weight: 300
+        .sb-top-close
+            color: white
+            font-size: 1.7rem
+    .sb-top-account
+        width: 85%
+        height: 5.2rem
+        margin: 0 auto
+        display: flex
+        align-items: center
+        background: #ffffff10
+        padding: 0.25rem 0.75rem
+        border-radius: 0.7rem
+        .acc-img
+            height: 100%
+            display: grid
+            place-items: center
+            font-size: 3.5rem
+            color: white
+            opacity: 0.8
+        .acc-info
+            margin-left: 5%
+            font-family: $font-secondary
+            h3
+                font-size: 1.1rem
+                font-weight: 400
+                letter-spacing: 0.8px
+                color: white
+            p
+                font-size: 0.9rem
+                color: white
+                opacity: 0.7
+// Links:
+.sidebar-links
+    color: white
+    width: 85%
+    margin: 0 auto
 
 .singleLink-container
     display: flex
@@ -108,8 +173,10 @@ a
         font-size: 1rem
     .sc-right
         margin-left: 0.75rem
-
-// MAIN SCREEN MOBILE
+/* ======================================================================== */
+/* Layout */
+/* ======================================================================== */
+// Mobile
 .main-layout-mobile
     padding-top: 4.55rem
     width: 90%
