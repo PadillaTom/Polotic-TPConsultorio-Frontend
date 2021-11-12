@@ -3,17 +3,7 @@ import {} from "react-icons";
 import {} from "react-icons";
 import {} from "react-icons";
 
-export const links = [
-  {
-    id: 1,
-    title: "Account",
-    url: "/account",
-  },
-  {
-    id: 2,
-    title: "Dashboard",
-    url: "/",
-  },
+export const patientLinks = [
   {
     id: 3,
     title: "New Patient",
@@ -29,6 +19,9 @@ export const links = [
     title: "Patient's Chart",
     url: "/patient-chart",
   },
+];
+
+export const dentistLinks = [
   {
     id: 6,
     title: "New Dentist",
@@ -44,6 +37,9 @@ export const links = [
     title: "Dentist's Chart",
     url: "/dentist-chart",
   },
+];
+
+export const dataLinks = [
   {
     id: 9,
     title: "Patients Per Day",

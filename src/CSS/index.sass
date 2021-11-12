@@ -36,6 +36,9 @@ ul
     list-style: none
 a
     text-decoration: none
+    color: inherit
+    transition: $trans-02
+    cursor: pointer
 
 /* --------------------------------------------------- */
 /* --------------------- MAIN APP -------------------- */
@@ -88,6 +91,23 @@ a
 .show-sidebar
     transform: translate(0)
     z-index: 1000
+
+.singleLink-container
+    display: flex
+    align-items: center
+    width: 100%
+    .sl-left
+        font-size: 1rem
+    .sl-right
+        margin-left: 0.75rem
+.sideCategory-container
+    display: flex
+    align-items: center
+    width: 100%
+    .sc-left
+        font-size: 1rem
+    .sc-right
+        margin-left: 0.75rem
 
 // MAIN SCREEN MOBILE
 .main-layout-mobile

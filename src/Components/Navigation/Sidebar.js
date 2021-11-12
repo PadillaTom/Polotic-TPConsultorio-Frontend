@@ -1,13 +1,19 @@
 import React from "react";
 
-import { links, mockUser } from "../../Utils/constants";
+import {
+  patientLinks,
+  dentistLinks,
+  dataLinks,
+  mockUser,
+} from "../../Utils/constants";
 
 import { useEventsContext } from "../../Context/EventsContext";
+import SideLink from "./SideLink";
+import SideCategory from "./SideCategory";
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useEventsContext();
 
-  const accountLink = links[0];
   // MOCK DATA:
   const { id, username, email, imageUrl } = mockUser;
 
@@ -22,7 +28,27 @@ const Sidebar = () => {
         </div>
         <div className="sb-top-account">Account</div>
       </div>
-      <div className="sidebar-links"></div>
+      <div className="sidebar-links">
+        <SideLink id={1} title="Dashboard" url="/" icon="icon"></SideLink>
+        <SideCategory category="Patient" icon="Icon"></SideCategory>
+        {patientLinks.map((singleLink) => {
+          return (
+            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
+          );
+        })}
+        <SideCategory category="Dentist" icon="Icon"></SideCategory>
+        {dentistLinks.map((singleLink) => {
+          return (
+            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
+          );
+        })}
+        <SideCategory category="Statistics" icon="Icon"></SideCategory>
+        {dataLinks.map((singleLink) => {
+          return (
+            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
+          );
+        })}
+      </div>
     </div>
   );
 };
