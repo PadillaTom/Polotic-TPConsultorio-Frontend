@@ -93,7 +93,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 1.7rem 0rem;
-  width: 75%;
+  width: 85%;
   margin: 0 auto;
 }
 .sidebar-top .sb-top-logo-close .sb-top-logo {
@@ -104,12 +104,12 @@ a {
   font-weight: 300;
 }
 .sidebar-top .sb-top-logo-close .sb-top-close {
-  color: white;
+  color: #9B2226;
   font-size: 1.7rem;
 }
 .sidebar-top .sb-top-account {
   width: 82%;
-  height: 5.2rem;
+  height: 4rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -121,7 +121,7 @@ a {
   height: 100%;
   display: grid;
   place-items: center;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: white;
   opacity: 0.8;
 }
@@ -130,7 +130,7 @@ a {
   font-family: "Open Sans", sans-serif;
 }
 .sidebar-top .sb-top-account .acc-info h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.6px;
   color: white;
@@ -161,7 +161,7 @@ a {
   align-items: center;
   width: 88%;
   margin-left: 12%;
-  height: 2.4rem;
+  height: 2rem;
   background: ransparent;
   padding: 0.25rem 1.2rem;
   border-radius: 0.7rem;
@@ -172,18 +172,18 @@ a {
   background: #ffffff10;
 }
 .singleLink-container .sl-left {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 .singleLink-container .sl-right {
   margin-left: 0.75rem;
   letter-spacing: 0.6px;
   font-weight: 300;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .sideCategory-container {
   width: 100%;
-  height: 2.6rem;
+  height: 2.2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -208,17 +208,16 @@ a {
   align-items: center;
 }
 .sideCategory-container .sc-left-container .sc-left {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 0.3rem;
 }
 .sideCategory-container .sc-left-container .sc-right {
   margin-left: 0.75rem;
   letter-spacing: 0.6px;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .sideCategory-container .sc-right-container {
-  margin-top: 0rem;
   margin-right: 1%;
   transform: rotate(-90deg);
   transition: 0.2s linear all;
@@ -226,8 +225,12 @@ a {
 
 .sb-active-link {
   background: #ffffff10;
+  color: #EE9B00;
 }
 
+.sb-active-category {
+  color: #EE9B00;
+}
 .sb-active-category .sc-right-container {
   margin-top: 0.3rem;
   transform: rotate(0deg);

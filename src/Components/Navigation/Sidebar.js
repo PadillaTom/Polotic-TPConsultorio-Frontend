@@ -43,6 +43,7 @@ const Sidebar = () => {
           <SideCategory
             category="Dashboard"
             icon={<FaHome></FaHome>}
+            id={1}
           ></SideCategory>
         </Link>
 
@@ -51,6 +52,7 @@ const Sidebar = () => {
           <SideCategory
             category="Patient"
             icon={<FaUsers></FaUsers>}
+            id={2}
           ></SideCategory>
           <ul>
             {patientLinks.map((singleLink) => {
@@ -68,6 +70,7 @@ const Sidebar = () => {
           <SideCategory
             category="Dentist"
             icon={<FaUserMd></FaUserMd>}
+            id={3}
           ></SideCategory>
           <ul>
             {dentistLinks.map((singleLink) => {
@@ -85,9 +88,10 @@ const Sidebar = () => {
           <SideCategory
             category="Statistics"
             icon={<FaChartBar></FaChartBar>}
+            id={4}
           ></SideCategory>
           <ul>
-            {dataLinks.map((singleLink) => {
+            {dataLinks.map((singleLink, index) => {
               return (
                 <li key={singleLink.id}>
                   <SideLink singleLink={singleLink}></SideLink>

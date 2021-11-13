@@ -2,7 +2,7 @@ import React from "react";
 import { AiOutlineDown } from "react-icons/ai";
 
 const SideCategory = (props) => {
-  const { icon, category } = props;
+  const { icon, category, id } = props;
 
   if (category === "Dashboard") {
     return (

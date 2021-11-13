@@ -112,7 +112,7 @@ a
         justify-content: space-between
         align-items: center
         padding: 1.7rem 0rem
-        width: 75%
+        width: 85%
         margin: 0 auto
         .sb-top-logo
             color: $color-bg-fa
@@ -121,11 +121,11 @@ a
             font-size: 1.5rem
             font-weight: 300
         .sb-top-close
-            color: white
+            color: $color-red-dark
             font-size: 1.7rem
     .sb-top-account
         width: 82%
-        height: 5.2rem
+        height: 4rem
         margin: 0 auto
         display: flex
         align-items: center
@@ -136,14 +136,14 @@ a
             height: 100%
             display: grid
             place-items: center
-            font-size: 3.5rem
+            font-size: 2.5rem
             color: white
             opacity: 0.8
         .acc-info
             margin-left: 5%
             font-family: $font-secondary
             h3
-                font-size: 1.1rem
+                font-size: 1rem
                 font-weight: 400
                 letter-spacing: 0.6px
                 color: white
@@ -157,19 +157,19 @@ a
     background: white
     opacity: 0.15
     margin: 1rem 0rem
+
 // Links:
 .sidebar-links
     color: white
     width: 93%
     margin: 0 auto
-
 .singleLink-container
     display: flex
     flex-direction: row
     align-items: center
     width: 88%
     margin-left: 12%
-    height: 2.4rem
+    height: 2rem
     background: ransparent
     padding: 0.25rem 1.2rem
     border-radius: 0.7rem
@@ -178,16 +178,16 @@ a
     &:hover
         background: #ffffff10
     .sl-left
-        font-size: 0.85rem
+        font-size: 0.82rem
     .sl-right
         margin-left: 0.75rem
         letter-spacing: 0.6px
         font-weight: 300
-        font-size: 0.85rem
+        font-size: 0.82rem
 
 .sideCategory-container
     width: 100%
-    height: 2.6rem
+    height: 2.2rem
     display: flex
     flex-direction: row
     justify-content: space-between
@@ -201,29 +201,30 @@ a
     &:hover
         background: #ffffff10
         .sc-right-container
-            margin-top: 00.3rem
+            margin-top: 0.3rem
             transform: rotate(0deg)
     .sc-left-container
         display: flex
         flex-direction: row
         align-items: center
         .sc-left
-            font-size: 1.1rem
+            font-size: 1rem
             margin-top: 0.3rem
         .sc-right
             margin-left: 0.75rem
             letter-spacing: 0.6px
             font-weight: 300
-            font-size: 1rem
+            font-size: 0.9rem
     .sc-right-container
-        margin-top: 0rem
         margin-right: 1%
         transform: rotate(-90deg)
         transition: $trans-02
 
 .sb-active-link
     background: #ffffff10
+    color: $color-orange-mid
 .sb-active-category
+    color: $color-orange-mid
     .sc-right-container
         margin-top: 00.3rem
         transform: rotate(0deg)
