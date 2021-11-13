@@ -60,7 +60,7 @@ export const dataLinks = [
   {
     id: 11,
     title: "Insurance Statistics",
-    url: "/patients-insurance",
+    url: "/data-patients-insurance",
     icon: <FcComboChart></FcComboChart>,
   },
 ];
