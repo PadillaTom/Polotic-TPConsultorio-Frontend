@@ -124,7 +124,7 @@ a
             color: white
             font-size: 1.7rem
     .sb-top-account
-        width: 85%
+        width: 82%
         height: 5.2rem
         margin: 0 auto
         display: flex
@@ -145,34 +145,89 @@ a
             h3
                 font-size: 1.1rem
                 font-weight: 400
-                letter-spacing: 0.8px
+                letter-spacing: 0.6px
                 color: white
             p
-                font-size: 0.9rem
+                font-size: 0.8rem
                 color: white
                 opacity: 0.7
+.sb-line
+    width: 100%
+    height: 0.2px
+    background: white
+    opacity: 0.15
+    margin: 1rem 0rem
 // Links:
 .sidebar-links
     color: white
-    width: 85%
+    width: 93%
     margin: 0 auto
 
 .singleLink-container
     display: flex
+    flex-direction: row
     align-items: center
-    width: 100%
+    width: 88%
+    margin-left: 12%
+    height: 2.4rem
+    background: ransparent
+    padding: 0.25rem 1.2rem
+    border-radius: 0.7rem
+    cursor: pointer
+    transition: $trans-02
+    &:hover
+        background: #ffffff10
     .sl-left
-        font-size: 1rem
+        font-size: 0.85rem
     .sl-right
         margin-left: 0.75rem
+        letter-spacing: 0.6px
+        font-weight: 300
+        font-size: 0.85rem
+
 .sideCategory-container
-    display: flex
-    align-items: center
     width: 100%
-    .sc-left
-        font-size: 1rem
-    .sc-right
-        margin-left: 0.75rem
+    height: 2.6rem
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    background: ransparent
+    padding: 0.25rem 1.2rem
+    margin: 0.2rem 0rem
+    border-radius: 0.7rem
+    cursor: pointer
+    transition: $trans-02
+    &:hover
+        background: #ffffff10
+        .sc-right-container
+            margin-top: 00.3rem
+            transform: rotate(0deg)
+    .sc-left-container
+        display: flex
+        flex-direction: row
+        align-items: center
+        .sc-left
+            font-size: 1.1rem
+            margin-top: 0.3rem
+        .sc-right
+            margin-left: 0.75rem
+            letter-spacing: 0.6px
+            font-weight: 300
+            font-size: 1rem
+    .sc-right-container
+        margin-top: 0rem
+        margin-right: 1%
+        transform: rotate(-90deg)
+        transition: $trans-02
+
+.sb-active-link
+    background: #ffffff10
+.sb-active-category
+    .sc-right-container
+        margin-top: 00.3rem
+        transform: rotate(0deg)
+
 /* ======================================================================== */
 /* Layout */
 /* ======================================================================== */

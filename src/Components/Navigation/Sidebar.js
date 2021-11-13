@@ -1,5 +1,7 @@
 import React from "react";
-import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaTimes, FaUsers, FaUserMd, FaHome, FaChartBar } from "react-icons/fa";
+
 import {
   patientLinks,
   dentistLinks,
@@ -15,7 +17,7 @@ const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useEventsContext();
 
   // MOCK DATA:
-  const { id, username, email, imageUrl } = mockUser;
+  const { username, email, imageUrl } = mockUser;
 
   return (
     <div className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
@@ -34,26 +36,66 @@ const Sidebar = () => {
         </div>
       </div>
 
+      <div className="sb-line"></div>
+
       <div className="sidebar-links">
-        <SideLink id={1} title="Dashboard" url="/" icon="icon"></SideLink>
-        <SideCategory category="Patient" icon="Icon"></SideCategory>
-        {patientLinks.map((singleLink) => {
-          return (
-            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
-          );
-        })}
-        <SideCategory category="Dentist" icon="Icon"></SideCategory>
-        {dentistLinks.map((singleLink) => {
-          return (
-            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
-          );
-        })}
-        <SideCategory category="Statistics" icon="Icon"></SideCategory>
-        {dataLinks.map((singleLink) => {
-          return (
-            <SideLink key={singleLink.id} singleLink={singleLink}></SideLink>
-          );
-        })}
+        <Link to="/">
+          <SideCategory
+            category="Dashboard"
+            icon={<FaHome></FaHome>}
+          ></SideCategory>
+        </Link>
+
+        {/* Patients */}
+        <div className="sb-single-dropdown">
+          <SideCategory
+            category="Patient"
+            icon={<FaUsers></FaUsers>}
+          ></SideCategory>
+          <ul>
+            {patientLinks.map((singleLink) => {
+              return (
+                <li key={singleLink.id}>
+                  <SideLink singleLink={singleLink}></SideLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Dentists */}
+        <div className="sb-single-dropdown">
+          <SideCategory
+            category="Dentist"
+            icon={<FaUserMd></FaUserMd>}
+          ></SideCategory>
+          <ul>
+            {dentistLinks.map((singleLink) => {
+              return (
+                <li key={singleLink.id}>
+                  <SideLink singleLink={singleLink}></SideLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Statistics */}
+        <div className="sb-single-dropdown">
+          <SideCategory
+            category="Statistics"
+            icon={<FaChartBar></FaChartBar>}
+          ></SideCategory>
+          <ul>
+            {dataLinks.map((singleLink) => {
+              return (
+                <li key={singleLink.id}>
+                  <SideLink singleLink={singleLink}></SideLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );
