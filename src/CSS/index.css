@@ -68,14 +68,14 @@ a {
 /* Sidebar */
 /* ======================================================================== */
 .sidebar {
-  width: 78%;
+  width: 75%;
   height: 100vh;
   background: #111827;
   position: fixed;
   top: 0;
   left: 0;
   transform: translate(-100%);
-  transition: 0.15s linear all;
+  transition: 0.2s linear all;
 }
 
 .show-sidebar {
@@ -92,7 +92,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.7rem 0rem;
+  padding: 1.3rem 0rem;
   width: 85%;
   margin: 0 auto;
 }
@@ -181,26 +181,32 @@ a {
   font-size: 0.82rem;
 }
 
+.sb-single-dropdown {
+  margin: 0.7rem 0rem;
+}
+.sb-single-dropdown .sideCategory-container {
+  cursor: auto;
+}
+.sb-single-dropdown .sideCategory-container:hover {
+  background: transparent;
+}
+
 .sideCategory-container {
   width: 100%;
-  height: 2.2rem;
+  height: 2.1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background: ransparent;
   padding: 0.25rem 1.2rem;
-  margin: 0.2rem 0rem;
+  margin: 0.1rem 0rem;
   border-radius: 0.7rem;
   cursor: pointer;
   transition: 0.2s linear all;
 }
 .sideCategory-container:hover {
   background: #ffffff10;
-}
-.sideCategory-container:hover .sc-right-container {
-  margin-top: 0.3rem;
-  transform: rotate(0deg);
 }
 .sideCategory-container .sc-left-container {
   display: flex;
@@ -212,28 +218,15 @@ a {
   margin-top: 0.3rem;
 }
 .sideCategory-container .sc-left-container .sc-right {
-  margin-left: 0.75rem;
+  margin-left: 0.6rem;
   letter-spacing: 0.6px;
   font-weight: 300;
   font-size: 0.9rem;
 }
 .sideCategory-container .sc-right-container {
-  margin-right: 1%;
-  transform: rotate(-90deg);
-  transition: 0.2s linear all;
-}
-
-.sb-active-link {
-  background: #ffffff10;
-  color: #EE9B00;
-}
-
-.sb-active-category {
-  color: #EE9B00;
-}
-.sb-active-category .sc-right-container {
-  margin-top: 0.3rem;
-  transform: rotate(0deg);
+  margin-top: 2%;
+  margin-right: 3%;
+  opacity: 0.3;
 }
 
 /* ======================================================================== */
@@ -243,6 +236,13 @@ a {
   padding-top: 4.55rem;
   width: 90%;
   margin: 0 auto;
+}
+
+.layout-modal {
+  width: 100%;
+  height: 100vh;
+  background: black;
+  opacity: 0.35;
 }
 
 /* ======================================================================== */

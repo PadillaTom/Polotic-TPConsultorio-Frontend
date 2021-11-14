@@ -13,12 +13,21 @@ import {
   InsuranceStats,
 } from "../../Pages/Statistics";
 
+import { useEventsContext } from "../../Context/EventsContext";
+
 function App() {
+  const { isSidebarOpen } = useEventsContext();
   return (
     <Router>
       <Navbar></Navbar>
       <Sidebar></Sidebar>
-      <div className="main-layout-mobile">
+      <div
+        className={`${
+          isSidebarOpen
+            ? "main-layout-mobile layout-modal"
+            : "main-layout-mobile"
+        }`}
+      >
         <Switch>
           <Route path="/" exact>
             <Homepage></Homepage>

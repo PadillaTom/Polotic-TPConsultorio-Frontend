@@ -44,6 +44,7 @@ const Sidebar = () => {
             category="Dashboard"
             icon={<FaHome></FaHome>}
             id={1}
+            onClick={closeSidebar}
           ></SideCategory>
         </Link>
 
