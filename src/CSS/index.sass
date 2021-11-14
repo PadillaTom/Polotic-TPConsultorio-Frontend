@@ -18,6 +18,9 @@
 $font-primary: 'Inter', sans-serif
 $font-secondary: 'Open Sans', sans-serif
 /* Colors */
+$color-white: #ffffff
+$color-black: #000000
+$color-lightgray: #b9b9b9
 $color-bg-fa: #fafafa
 $color-blue-lightest: #94D2BD
 $color-blue-light: #0A9396
@@ -59,7 +62,7 @@ a
 /* Navbar */
 /* ======================================================================== */
 .navbar-container
-    background: white
+    background: $color-white
     box-shadow: $shadow-1
     width: 100%
     height: 4rem
@@ -139,7 +142,7 @@ a
             display: grid
             place-items: center
             font-size: 2.5rem
-            color: white
+            color: $color-white
             opacity: 0.8
         .acc-info
             margin-left: 5%
@@ -148,21 +151,21 @@ a
                 font-size: 1rem
                 font-weight: 400
                 letter-spacing: 0.6px
-                color: white
+                color: $color-white
             p
                 font-size: 0.8rem
-                color: white
+                color: $color-white
                 opacity: 0.7
 .sb-line
     width: 100%
     height: 0.2px
-    background: white
+    background: $color-white
     opacity: 0.15
     margin: 1rem 0rem
 
 // Links:
 .sidebar-links
-    color: white
+    color: $color-white
     width: 93%
     margin: 0 auto
 .singleLink-container
@@ -172,7 +175,7 @@ a
     width: 88%
     margin-left: 12%
     height: 2rem
-    background: ransparent
+    background: transparent
     padding: 0.25rem 1.2rem
     border-radius: 0.7rem
     cursor: pointer
@@ -226,15 +229,6 @@ a
         margin-right: 3%
         opacity: 0.3
 
-// .sb-active-link
-//     background: #ffffff10
-//     color: $color-orange-mid
-// .sb-active-category
-//     color: $color-orange-mid
-//     .sc-right-container
-//         margin-top: 00.3rem
-//         transform: rotate(0deg)
-
 /* ======================================================================== */
 /* Layout */
 /* ======================================================================== */
@@ -246,18 +240,61 @@ a
 .layout-modal
     width: 100%
     height: 100vh
-    background: black
-    opacity: 0.35
+    position: fixed
+    top: 0
+    left: 0
+    background: $color-black
+    opacity: 0.5
+
+/* ======================================================================== */
+/* Create PAGE */
+/* ======================================================================== */
+.create-page
+    padding-top: 5%
+    padding-bottom: 25%
+    .create-page-title
+        text-align: center
+        h2
+            font-size: 2rem
+            font-weight: 300
+            letter-spacing: 1.2px
+        p
+            font-size: 0.9rem
+            letter-spacing: 2px
+            color: $color-lightgray
+            padding: 0.3rem 0rem
+    .cp-separator
+        height: 1px
+        margin: 2rem auto
+        width: 65%
+        background: $color-orange-dark
+        opacity: 0.6
+
+/* ======================================================================== */
+/* Create FORM */
+/* ======================================================================== */
+.form-create-container
+    .form-create
+        background: $color-white
+        box-shadow: 0px 0px 15px #cfcfcf7c
+        padding: 1rem 2rem
+        .fc-single-input
+            display: flex
+            flex-direction: column
+            margin: 0.55rem 0rem
+            label
+                color: $color-blue-mid
+                font-size: 0.85rem
+                margin-bottom: 0.3rem
+            input
+                border: 1px solid $color-lightgray
+                height: 2rem
+                font-size: 1.1rem
+                letter-spacing: 0.45px
+                padding-left: 0.45rem
+
 /* ======================================================================== */
 /* 1. Login Screen */
-/* ======================================================================== */
-
-/* ======================================================================== */
-/* 2. Dashboard Screen */
-/* ======================================================================== */
-
-/* ======================================================================== */
-/* 3. PATIENT Create Screen */
 /* ======================================================================== */
 
 /* ======================================================================== */

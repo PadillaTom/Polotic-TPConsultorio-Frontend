@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Navbar, Sidebar } from "../Navigation";
 
-import { Homepage } from "../../Pages";
-import { DentistForm, PatientForm } from "../../Pages/Forms";
+import { Homepage, PatientCreate, DentistCreate } from "../../Pages";
 import { DentistTable, PatientTable } from "../../Pages/Tables";
 import { DentistChart, PatientChart } from "../../Pages/Charts";
 import {
@@ -16,24 +15,21 @@ import {
 import { useEventsContext } from "../../Context/EventsContext";
 
 function App() {
-  const { isSidebarOpen } = useEventsContext();
+  const { isSidebarOpen, closeSidebar } = useEventsContext();
   return (
     <Router>
       <Navbar></Navbar>
       <Sidebar></Sidebar>
-      <div
-        className={`${
-          isSidebarOpen
-            ? "main-layout-mobile layout-modal"
-            : "main-layout-mobile"
-        }`}
-      >
+      {isSidebarOpen && (
+        <div className="layout-modal" onClick={closeSidebar}></div>
+      )}
+      <div className="main-layout-mobile">
         <Switch>
           <Route path="/" exact>
             <Homepage></Homepage>
           </Route>
           <Route path="/patient-create">
-            <PatientForm></PatientForm>
+            <PatientCreate></PatientCreate>
           </Route>
           <Route path="/patient-list">
             <PatientTable></PatientTable>
@@ -42,7 +38,7 @@ function App() {
             <PatientChart></PatientChart>
           </Route>
           <Route path="/dentist-create">
-            <DentistForm></DentistForm>
+            <DentistCreate></DentistCreate>
           </Route>
           <Route path="/dentist-list">
             <DentistTable></DentistTable>

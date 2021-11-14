@@ -31,7 +31,7 @@ a {
 /* Navbar */
 /* ======================================================================== */
 .navbar-container {
-  background: white;
+  background: #ffffff;
   box-shadow: 0px 0px 15px #dfdfdfa1;
   width: 100%;
   height: 4rem;
@@ -122,7 +122,7 @@ a {
   display: grid;
   place-items: center;
   font-size: 2.5rem;
-  color: white;
+  color: #ffffff;
   opacity: 0.8;
 }
 .sidebar-top .sb-top-account .acc-info {
@@ -133,24 +133,24 @@ a {
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.6px;
-  color: white;
+  color: #ffffff;
 }
 .sidebar-top .sb-top-account .acc-info p {
   font-size: 0.8rem;
-  color: white;
+  color: #ffffff;
   opacity: 0.7;
 }
 
 .sb-line {
   width: 100%;
   height: 0.2px;
-  background: white;
+  background: #ffffff;
   opacity: 0.15;
   margin: 1rem 0rem;
 }
 
 .sidebar-links {
-  color: white;
+  color: #ffffff;
   width: 93%;
   margin: 0 auto;
 }
@@ -162,7 +162,7 @@ a {
   width: 88%;
   margin-left: 12%;
   height: 2rem;
-  background: ransparent;
+  background: transparent;
   padding: 0.25rem 1.2rem;
   border-radius: 0.7rem;
   cursor: pointer;
@@ -241,18 +241,70 @@ a {
 .layout-modal {
   width: 100%;
   height: 100vh;
-  background: black;
-  opacity: 0.35;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0.5;
+}
+
+/* ======================================================================== */
+/* Create PAGE */
+/* ======================================================================== */
+.create-page {
+  padding-top: 5%;
+  padding-bottom: 25%;
+}
+.create-page .create-page-title {
+  text-align: center;
+}
+.create-page .create-page-title h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+}
+.create-page .create-page-title p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #b9b9b9;
+  padding: 0.3rem 0rem;
+}
+.create-page .cp-separator {
+  height: 1px;
+  margin: 2rem auto;
+  width: 65%;
+  background: #CA6702;
+  opacity: 0.6;
+}
+
+/* ======================================================================== */
+/* Create FORM */
+/* ======================================================================== */
+.form-create-container .form-create {
+  background: #ffffff;
+  box-shadow: 0px 0px 15px #cfcfcf7c;
+  padding: 1rem 2rem;
+}
+.form-create-container .form-create .fc-single-input {
+  display: flex;
+  flex-direction: column;
+  margin: 0.55rem 0rem;
+}
+.form-create-container .form-create .fc-single-input label {
+  color: #005F73;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+.form-create-container .form-create .fc-single-input input {
+  border: 1px solid #b9b9b9;
+  height: 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.45px;
+  padding-left: 0.45rem;
 }
 
 /* ======================================================================== */
 /* 1. Login Screen */
-/* ======================================================================== */
-/* ======================================================================== */
-/* 2. Dashboard Screen */
-/* ======================================================================== */
-/* ======================================================================== */
-/* 3. PATIENT Create Screen */
 /* ======================================================================== */
 /* ======================================================================== */
 /* 4. PATIENT Basic Info  Screen */
