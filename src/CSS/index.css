@@ -38,6 +38,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 850;
 }
 .navbar-container .navbar-center {
   display: flex;
@@ -246,6 +247,7 @@ a {
   left: 0;
   background: #000000;
   opacity: 0.5;
+  z-index: 900;
 }
 
 /* ======================================================================== */
@@ -282,30 +284,71 @@ a {
 /* ======================================================================== */
 .form-create-container .form-create {
   background: #ffffff;
-  box-shadow: 0px 0px 15px #cfcfcf7c;
-  padding: 1rem 2rem;
+  box-shadow: 0px 0px 15px #cfcfcf52;
+  padding: 0.5rem 2rem;
 }
 .form-create-container .form-create .fc-single-input {
   display: flex;
   flex-direction: column;
-  margin: 0.55rem 0rem;
+  margin: 1rem 0rem;
 }
 .form-create-container .form-create .fc-single-input label {
   color: #005F73;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   margin-bottom: 0.3rem;
 }
 .form-create-container .form-create .fc-single-input input {
   border: 1px solid #b9b9b9;
   height: 2rem;
-  font-size: 1.1rem;
-  letter-spacing: 0.45px;
+  font-size: 1rem;
+  letter-spacing: 0.7px;
   padding-left: 0.45rem;
+  color: #1f1f1fee;
+  background-color: #fafafa;
+}
+.form-create-container .form-create .fc-single-input input:focus {
+  outline-color: #0A9396;
+}
+.form-create-container .form-create .fc-single-check {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.form-create-container .form-create .fc-single-check label {
+  padding-top: 1.7%;
+}
+.form-create-container .form-create .fc-single-check input {
+  margin-left: 1rem;
+  height: 1rem;
+  width: 1rem;
 }
 
 /* ======================================================================== */
-/* 1. Login Screen */
+/* Buttons */
 /* ======================================================================== */
+.btn-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem 0rem;
+}
+.btn-container .btn-submit {
+  width: 85%;
+  height: 3rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: #0A9396;
+  box-shadow: 0px 0px 9px #a1a1a167;
+  cursor: pointer;
+  transition: 0.2s linear all;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
 /* ======================================================================== */
 /* 4. PATIENT Basic Info  Screen */
 /* ======================================================================== */

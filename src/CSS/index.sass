@@ -17,6 +17,9 @@
 /* Fonts */
 $font-primary: 'Inter', sans-serif
 $font-secondary: 'Open Sans', sans-serif
+$font-color-light: #1f1f1fbd
+$font-color-mid: #1f1f1fc2
+$font-color-dark: #1f1f1fee
 /* Colors */
 $color-white: #ffffff
 $color-black: #000000
@@ -69,6 +72,7 @@ a
     position: fixed
     top: 0
     left: 0
+    z-index: 850
     .navbar-center
         display: flex
         flex-direction: row
@@ -245,6 +249,7 @@ a
     left: 0
     background: $color-black
     opacity: 0.5
+    z-index: 900
 
 /* ======================================================================== */
 /* Create PAGE */
@@ -276,26 +281,60 @@ a
 .form-create-container
     .form-create
         background: $color-white
-        box-shadow: 0px 0px 15px #cfcfcf7c
-        padding: 1rem 2rem
+        box-shadow: 0px 0px 15px #cfcfcf52
+        padding: 0.5rem 2rem
         .fc-single-input
             display: flex
             flex-direction: column
-            margin: 0.55rem 0rem
+            margin: 1rem 0rem
             label
                 color: $color-blue-mid
-                font-size: 0.85rem
+                font-size: 0.9rem
                 margin-bottom: 0.3rem
             input
                 border: 1px solid $color-lightgray
                 height: 2rem
-                font-size: 1.1rem
-                letter-spacing: 0.45px
+                font-size: 1rem
+                letter-spacing: 0.7px
                 padding-left: 0.45rem
-
+                color: $font-color-dark
+                background-color: $color-bg-fa
+                &:focus
+                    outline-color: $color-blue-light
+        .fc-single-check
+            flex-direction: row
+            align-items: center
+            justify-content: center
+            margin-top: 1.5rem
+            label
+                padding-top: 1.7%
+            input
+                margin-left: 1rem
+                height: 1rem
+                width: 1rem
 /* ======================================================================== */
-/* 1. Login Screen */
+/* Buttons */
 /* ======================================================================== */
+.btn-container
+    width: 100%
+    display: grid
+    place-items: center
+    padding: 1.5rem 0rem
+    // BtnSubmit
+    .btn-submit
+        width: 85%
+        height: 3rem
+        outline: none
+        border: none
+        border-radius: 0.2rem
+        background-color: $color-blue-light
+        box-shadow: 0px 0px 9px #a1a1a167
+        cursor: pointer
+        transition: $trans-02
+        font-size: 1.1rem
+        color: $color-white
+        font-weight: 300
+        letter-spacing: 2px
 
 /* ======================================================================== */
 /* 4. PATIENT Basic Info  Screen */
