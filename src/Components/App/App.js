@@ -3,8 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Navbar, Sidebar } from "../Navigation";
 
-import { Homepage, PatientCreate, DentistCreate } from "../../Pages";
-import { DentistTable, PatientTable } from "../../Pages/Tables";
+import {
+  Homepage,
+  PatientCreate,
+  PatientList,
+  DentistCreate,
+  DentistList,
+} from "../../Pages";
+
 import { DentistChart, PatientChart } from "../../Pages/Charts";
 import {
   PatientsPerDay,
@@ -32,7 +38,7 @@ function App() {
             <PatientCreate></PatientCreate>
           </Route>
           <Route path="/patient-list">
-            <PatientTable></PatientTable>
+            <PatientList></PatientList>
           </Route>
           <Route path="/patient-chart">
             <PatientChart></PatientChart>
@@ -41,7 +47,7 @@ function App() {
             <DentistCreate></DentistCreate>
           </Route>
           <Route path="/dentist-list">
-            <DentistTable></DentistTable>
+            <DentistList></DentistList>
           </Route>
           <Route path="/dentist-chart">
             <DentistChart></DentistChart>
