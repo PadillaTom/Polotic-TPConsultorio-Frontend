@@ -2,12 +2,12 @@ import React from "react";
 
 const PersonFields = ({ collect }) => {
   const [data, setData] = React.useState({
-    idCard: "",
+    dni: "",
     firstName: "",
     lastName: "",
     birthDate: "",
     address: "",
-    phone: "",
+    phoneNumber: "",
     email: "",
   });
 
@@ -26,8 +26,8 @@ const PersonFields = ({ collect }) => {
         <input
           type="text"
           name="idCard"
-          id="idCard"
-          value={data.idCard}
+          id="dni"
+          value={data.dni}
           onChange={(e) => {
             handleData(e);
           }}
@@ -85,9 +85,9 @@ const PersonFields = ({ collect }) => {
         <label htmlFor="phone">Phone Number</label>
         <input
           type="text"
-          name="phone"
-          id="phone"
-          value={data.phone}
+          name="phoneNumber"
+          id="phoneNumber"
+          value={data.phoneNumber}
           onChange={(e) => {
             handleData(e);
           }}
