@@ -28,7 +28,6 @@ const PatientForm = () => {
           // SET RECENTLY CREATED ON CONTEXT
           history.push("/patient-list");
           // SHOW MODAL DISPLAYING RECENT CREATION
-          // CLOSE AUTO ON 5s OR CROSS.
         }
       })
       .catch((err) => console.log(err));
