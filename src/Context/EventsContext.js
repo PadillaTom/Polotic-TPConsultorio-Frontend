@@ -6,7 +6,6 @@ import { SIDEBAR_OPEN, SIDEBAR_CLOSE } from "../Actions/actions";
 // Initial State:
 const initialState = {
   isSidebarOpen: false,
-  personData: {},
 };
 
 const EventsContext = createContext();

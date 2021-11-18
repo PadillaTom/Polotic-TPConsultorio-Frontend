@@ -251,27 +251,27 @@ a {
 }
 
 /* ======================================================================== */
-/* Create PAGE */
+/* PAGE */
 /* ======================================================================== */
-.create-page {
+.page {
   padding-top: 5%;
   padding-bottom: 25%;
 }
-.create-page .create-page-title {
+.page .page-title {
   text-align: center;
 }
-.create-page .create-page-title h2 {
+.page .page-title h2 {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 1.2px;
 }
-.create-page .create-page-title p {
+.page .page-title p {
   font-size: 0.9rem;
   letter-spacing: 2px;
   color: #b9b9b9;
   padding: 0.3rem 0rem;
 }
-.create-page .cp-separator {
+.page .p-separator {
   height: 1px;
   margin: 2rem auto;
   width: 65%;
@@ -280,7 +280,7 @@ a {
 }
 
 /* ======================================================================== */
-/* Create FORM */
+/* FORM */
 /* ======================================================================== */
 .form-create-container .form-create {
   background: #ffffff;
@@ -350,8 +350,71 @@ a {
 }
 
 /* ======================================================================== */
-/* 4. PATIENT Basic Info  Screen */
+/* 4. Basic Info CARD */
 /* ======================================================================== */
+.mobile-card {
+  width: 100%;
+  padding: 1.2rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px #dfdfdfa1;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.mobile-card .card-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.mobile-card .card-top .ct-left {
+  font-size: 2.6rem;
+  color: #9B2226;
+}
+.mobile-card .card-top .ct-right {
+  width: 100%;
+  margin-top: -3.7%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.mobile-card .card-top .ct-right .ctr-info h3 {
+  font-size: 0.87rem;
+}
+.mobile-card .card-top .ct-right .ctr-info p {
+  font-size: 0.9rem;
+  color: #b9b9b9;
+}
+.mobile-card .card-top .ct-right .ctr-chart {
+  margin-top: -2%;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.mobile-card .card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem 0.85rem;
+  margin: 0 auto;
+  margin-bottom: 0.45rem;
+  border-radius: 0.15rem;
+  background: #eeeeee98;
+  transition: 0.2s linear all;
+}
+.mobile-card .card-row h2 {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.mobile-card .card-row p {
+  font-weight: 500;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+.mobile-card .card-row:hover {
+  background: #e0e0e0be;
+}
+
 /* ======================================================================== */
 /* 5. PATIENT Chart Screen */
 /* ======================================================================== */
