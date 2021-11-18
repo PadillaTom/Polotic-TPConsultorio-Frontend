@@ -26,7 +26,7 @@ const DentistForm = () => {
     axios
       .post(postDentist, postData)
       .then((res) => {
-        console.log(res.data, res.status); // *** BORRAR EL LOG ***
+        // console.log(res.data, res.status); // *** CONSOLE LOG ***
         if (res.status === 201) {
           // SET RECENTLY CREATED ON CONTEXT
           history.push("/dentist-list");

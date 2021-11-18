@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { PatientTable } from "./Tables";
+import { PatientCard } from "../Components/Cards";
 import { Loading, Error } from "../Components";
 
 import { useGetDataContext } from "../Context/GetDataContext";
@@ -25,17 +25,21 @@ const PatientList = () => {
     <Error></Error>;
   }
   return (
-    <div>
-      Patients List Page:
-      {basicPatients.map((singlePatient, index) => {
-        const { firstName } = singlePatient;
-        return (
-          <div key={index}>
-            <h2>{firstName}</h2>
-          </div>
-        );
+    <div className="page">
+      <div className="page-title">
+        <h2>Patients</h2>
+        <p>Basic information about patients.</p>
+      </div>
+      <div className="p-separator"></div>
+      <h4
+        style={{ display: "grid", placeItems: "center", margin: "1.7rem 0rem" }}
+      >
+        TODO: Some Filters
+      </h4>
+      {basicPatients.map((singlePatient) => {
+        const { id } = singlePatient;
+        return <PatientCard key={id} {...singlePatient}></PatientCard>;
       })}
-      <PatientTable></PatientTable>
     </div>
   );
 };

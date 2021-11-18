@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { DentistTable } from "./Tables";
+import { DentistCard } from "../Components/Cards";
 import { Loading, Error } from "../Components";
 
 import { useGetDataContext } from "../Context/GetDataContext";
@@ -25,17 +25,21 @@ const DentistList = () => {
     <Error></Error>;
   }
   return (
-    <div>
-      Dentist List PAGE:
-      {basicDentists.map((singlePatient, index) => {
-        const { firstName } = singlePatient;
-        return (
-          <div key={index}>
-            <h2>{firstName}</h2>
-          </div>
-        );
+    <div className="page">
+      <div className="page-title">
+        <h2>Dentists</h2>
+        <p>Basic information about dentists.</p>
+      </div>
+      <div className="p-separator"></div>
+      <h4
+        style={{ display: "grid", placeItems: "center", margin: "1.7rem 0rem" }}
+      >
+        TODO: Some Filters
+      </h4>
+      {basicDentists.map((singleDentist) => {
+        const { id } = singleDentist;
+        return <DentistCard key={id} {...singleDentist}></DentistCard>;
       })}
-      <DentistTable></DentistTable>
     </div>
   );
 };

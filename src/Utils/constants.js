@@ -81,7 +81,7 @@ export const postPatient = "http://localhost:8080/patients/create";
 // GET Basic Patients:
 export const getBasicPatientsUrl = "http://localhost:8080/patients/all";
 // GET Complete Patients:
-export const getCompletePatientsUrl = "";
+export const getCompletePatientsUrl = "http://localhost:8080/patients/details";
 // PUT Patients:
 export const putPatient = "";
 
@@ -90,6 +90,6 @@ export const postDentist = "http://localhost:8080/dentists/create";
 // GET Basic Dentist:
 export const getBasicDentistsUrl = "http://localhost:8080/dentists/all";
 // GET Complete Dentist:
-export const getCompleteDentistsUrl = "";
+export const getCompleteDentistsUrl = "http://localhost:8080/dentists/details";
 // PUT Dentist:
 export const putDentist = "";
