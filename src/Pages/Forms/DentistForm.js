@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 import { PersonFields } from "../Forms";
 import { BtnSubmit } from "../../Components/Buttons";
 
+import { postDentist } from "../../Utils/constants";
+
 const DentistForm = () => {
   const history = useHistory();
   const [speciality, setSpeciality] = useState("");
@@ -22,7 +24,7 @@ const DentistForm = () => {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:8080/dentists/create", postData)
+      .post(postDentist, postData)
       .then((res) => {
         console.log(res.data, res.status); // *** BORRAR EL LOG ***
         if (res.status === 201) {

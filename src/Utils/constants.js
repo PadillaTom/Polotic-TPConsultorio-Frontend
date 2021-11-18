@@ -71,3 +71,25 @@ export const mockUser = {
   email: "email@email.com",
   imageUrl: <RiAccountCircleFill></RiAccountCircleFill>,
 };
+
+// **************
+//    API Urls
+// **************
+
+// POST Patients:
+export const postPatient = "http://localhost:8080/patients/create";
+// GET Basic Patients:
+export const getBasicPatient = "";
+// GET Complete Patients:
+export const getCompletePatient = "";
+// PUT Patients:
+export const putPatient = "";
+
+// POST Dentist:
+export const postDentist = "http://localhost:8080/dentists/create";
+// GET Basic Dentist:
+export const getBasicDentist = "";
+// GET Complete Dentist:
+export const getCompleteDentist = "";
+// PUT Dentist:
+export const putDentist = "";
