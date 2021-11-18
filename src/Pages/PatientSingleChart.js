@@ -1,23 +1,36 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Loading, Error } from "../Components";
 
-import { getCompletePatientsUrl } from "../Utils/constants";
+import { useGetDataContext } from "../Context/GetDataContext";
 
 const PatientSingleChart = () => {
   const { id } = useParams();
-  const [data, setData] = useState({});
+  const {
+    getPatientDetails,
+    single_patient: patient,
+    single_patient_loading: isLoading,
+    single_patient_error: error,
+  } = useGetDataContext();
 
   useEffect(() => {
-    axios
-      .get(`${getCompletePatientsUrl}/${id}`)
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
+    getPatientDetails(id);
   }, [id]);
 
-  console.log(data); // RE RENDERS on OPEN CLOSE SIDEBAR
-
-  return <div>Single Patient</div>;
+  console.log(patient);
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  if (error) {
+    return <Error></Error>;
+  }
+  return (
+    <div>
+      <h2>Details</h2>
+      <h2>{patient.firstName}</h2>
+      <h2>{patient.dni}</h2>
+    </div>
+  );
 };
 
 export default PatientSingleChart;

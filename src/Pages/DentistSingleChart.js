@@ -1,22 +1,38 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 
-import { getCompleteDentistsUrl } from "../Utils/constants";
+import { Loading, Error } from "../Components";
+
+import { useGetDataContext } from "../Context/GetDataContext";
 
 const DentistSingleChart = () => {
   const { id } = useParams();
-  const [data, setData] = useState({});
+  const {
+    getDentistDetails,
+    single_dentist: dentist,
+    single_dentist_loading: isLoading,
+    single_dentist_error: error,
+  } = useGetDataContext();
+
   useEffect(() => {
-    axios
-      .get(`${getCompleteDentistsUrl}/${id}`)
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
+    getDentistDetails(id);
   }, [id]);
 
-  console.log(data); // RE RENDERS on OPEN CLOSE SIDEBAR
+  console.log(dentist);
 
-  return <div>Single Chart</div>;
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  if (error) {
+    return <Error></Error>;
+  }
+  return (
+    <div>
+      Dentist Details
+      <h2>{dentist.firstName}</h2>
+      <h2>{dentist.dni}</h2>
+    </div>
+  );
 };
 
 export default DentistSingleChart;
