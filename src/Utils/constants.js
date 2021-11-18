@@ -79,17 +79,17 @@ export const mockUser = {
 // POST Patients:
 export const postPatient = "http://localhost:8080/patients/create";
 // GET Basic Patients:
-export const getBasicPatient = "";
+export const getBasicPatientsUrl = "http://localhost:8080/patients/all";
 // GET Complete Patients:
-export const getCompletePatient = "";
+export const getCompletePatientsUrl = "";
 // PUT Patients:
 export const putPatient = "";
 
 // POST Dentist:
 export const postDentist = "http://localhost:8080/dentists/create";
 // GET Basic Dentist:
-export const getBasicDentist = "";
+export const getBasicDentistsUrl = "http://localhost:8080/dentists/all";
 // GET Complete Dentist:
-export const getCompleteDentist = "";
+export const getCompleteDentistsUrl = "";
 // PUT Dentist:
 export const putDentist = "";
