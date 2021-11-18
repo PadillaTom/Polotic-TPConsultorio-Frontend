@@ -15,7 +15,7 @@ const PatientSingleChart = () => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  console.log(data);
+  console.log(data); // RE RENDERS on OPEN CLOSE SIDEBAR
 
   return <div>Single Patient</div>;
 };

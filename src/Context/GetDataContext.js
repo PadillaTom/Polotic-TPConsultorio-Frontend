@@ -19,6 +19,8 @@ const initialState = {
   basicDentists: [],
   dentists_loading: false,
   dentists_error: false,
+  single_patient: {},
+  single_dentist: {},
 };
 
 const GetDataContext = createContext();

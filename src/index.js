@@ -8,10 +8,10 @@ import { EventsProvider } from "./Context/EventsContext";
 import { GetDataProvider } from "./Context/GetDataContext";
 
 ReactDOM.render(
-  <EventsProvider>
-    <GetDataProvider>
+  <GetDataProvider>
+    <EventsProvider>
       <App />
-    </GetDataProvider>
-  </EventsProvider>,
+    </EventsProvider>
+  </GetDataProvider>,
   document.getElementById("root")
 );
