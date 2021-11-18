@@ -5,10 +5,13 @@ import "./CSS/index.css";
 import { App } from "./Components/App";
 
 import { EventsProvider } from "./Context/EventsContext";
+import { GetDataProvider } from "./Context/GetDataContext";
 
 ReactDOM.render(
   <EventsProvider>
-    <App />
+    <GetDataProvider>
+      <App />
+    </GetDataProvider>
   </EventsProvider>,
   document.getElementById("root")
 );

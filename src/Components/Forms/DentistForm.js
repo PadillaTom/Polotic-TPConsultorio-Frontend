@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+
 import { PersonFields } from "../Forms";
 import { BtnSubmit } from "../../Components/Buttons";
 
-const PatientForm = () => {
+import { postDentist } from "../../Utils/constants";
+
+const DentistForm = () => {
   const history = useHistory();
-  const [hasSecurity, setHasSecurity] = useState(false);
+  const [speciality, setSpeciality] = useState("");
   const [personData, setPersonData] = useState({});
   const [postData, setPostData] = useState({});
 
@@ -15,18 +18,18 @@ const PatientForm = () => {
   };
 
   useEffect(() => {
-    const finalPost = { ...personData, hasSecurity };
+    const finalPost = { ...personData, speciality };
     setPostData(finalPost);
-  }, [hasSecurity, personData]);
+  }, [speciality, personData]);
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:8080/patients/create", postData)
+      .post(postDentist, postData)
       .then((res) => {
-        console.log(res.data, res.status); // *** BORRAR EL LOG ***
+        // console.log(res.data, res.status); // *** CONSOLE LOG ***
         if (res.status === 201) {
           // SET RECENTLY CREATED ON CONTEXT
-          history.push("/patient-list");
+          history.push("/dentist-list");
           // SHOW MODAL DISPLAYING RECENT CREATION
         }
       })
@@ -43,14 +46,14 @@ const PatientForm = () => {
         }}
       >
         <PersonFields collect={collectPersonFields}></PersonFields>
-        <div className="fc-single-input fc-single-check">
-          <label htmlFor="security">Has Security:</label>
+        <div className="fc-single-input">
+          <label htmlFor="speciality">Speciality</label>
           <input
-            type="checkbox"
-            name="security"
-            value={hasSecurity}
+            type="text"
+            name="speciality"
+            value={speciality}
             onChange={(e) => {
-              setHasSecurity(e.target.checked);
+              setSpeciality(e.target.value);
             }}
           />
         </div>
@@ -62,4 +65,4 @@ const PatientForm = () => {
   );
 };
 
-export default PatientForm;
+export default DentistForm;

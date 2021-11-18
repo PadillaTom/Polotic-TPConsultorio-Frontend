@@ -23,6 +23,8 @@ $font-color-dark: #1f1f1fee
 /* Colors */
 $color-white: #ffffff
 $color-black: #000000
+$color-lightgray-light: #eeeeee98
+$color-lightgray-mid: #e0e0e0be
 $color-lightgray: #b9b9b9
 $color-bg-fa: #fafafa
 $color-blue-lightest: #94D2BD
@@ -252,12 +254,12 @@ a
     z-index: 900
 
 /* ======================================================================== */
-/* Create PAGE */
+/* PAGE */
 /* ======================================================================== */
-.create-page
+.page
     padding-top: 5%
     padding-bottom: 25%
-    .create-page-title
+    .page-title
         text-align: center
         h2
             font-size: 2rem
@@ -268,7 +270,7 @@ a
             letter-spacing: 2px
             color: $color-lightgray
             padding: 0.3rem 0rem
-    .cp-separator
+    .p-separator
         height: 1px
         margin: 2rem auto
         width: 65%
@@ -276,7 +278,7 @@ a
         opacity: 0.6
 
 /* ======================================================================== */
-/* Create FORM */
+/* FORM */
 /* ======================================================================== */
 .form-create-container
     .form-create
@@ -337,8 +339,60 @@ a
         letter-spacing: 2px
 
 /* ======================================================================== */
-/* 4. PATIENT Basic Info  Screen */
+/* 4. Basic Info CARD */
 /* ======================================================================== */
+.mobile-card
+    width: 100%
+    padding: 1.2rem
+    background: $color-white
+    box-shadow: $shadow-1
+    overflow: hidden
+    margin-bottom: 1rem
+    .card-top
+        display: flex
+        align-items: center
+        margin-bottom: 0.5rem
+        .ct-left
+            font-size: 2.6rem
+            color: $color-red-dark
+        .ct-right
+            width: 100%
+            margin-top: -3.7%
+            margin-left: 2%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            font-family: $font-secondary
+            .ctr-info
+                h3
+                    font-size: 0.87rem
+                p
+                    font-size: 0.9rem
+                    color: $color-lightgray
+            .ctr-chart
+                margin-top: -2%
+                font-size: 1.6rem
+                cursor: pointer
+    .card-row
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        padding: 0.3rem 0.85rem
+        margin: 0 auto
+        margin-bottom: 0.45rem
+        border-radius: 0.15rem
+        background: $color-lightgray-light
+        transition: $trans-02
+        h2
+            font-weight: 300
+            font-size: 0.9rem
+        p
+            font-weight: 500
+            font-size: 0.75rem
+            letter-spacing: 0.3px
+        &:hover
+            background: $color-lightgray-mid
 
 /* ======================================================================== */
 /* 5. PATIENT Chart Screen */

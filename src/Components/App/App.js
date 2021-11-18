@@ -7,11 +7,12 @@ import {
   Homepage,
   PatientCreate,
   PatientList,
+  PatientSingleChart,
   DentistCreate,
   DentistList,
+  DentistSingleChart,
 } from "../../Pages";
 
-import { DentistChart, PatientChart } from "../../Pages/Charts";
 import {
   PatientsPerDay,
   DentistRDV,
@@ -40,8 +41,8 @@ function App() {
           <Route path="/patient-list">
             <PatientList></PatientList>
           </Route>
-          <Route path="/patient-chart">
-            <PatientChart></PatientChart>
+          <Route path="/patient-chart/:id">
+            <PatientSingleChart></PatientSingleChart>
           </Route>
           <Route path="/dentist-create">
             <DentistCreate></DentistCreate>
@@ -49,8 +50,8 @@ function App() {
           <Route path="/dentist-list">
             <DentistList></DentistList>
           </Route>
-          <Route path="/dentist-chart">
-            <DentistChart></DentistChart>
+          <Route path="/dentist-chart/:id">
+            <DentistSingleChart></DentistSingleChart>
           </Route>
           <Route path="/data-patients-day">
             <PatientsPerDay></PatientsPerDay>
