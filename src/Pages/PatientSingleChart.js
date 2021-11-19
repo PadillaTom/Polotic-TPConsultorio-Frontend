@@ -26,7 +26,7 @@ const PatientSingleChart = () => {
     phoneNumber,
     email,
     hasSecurity,
-    responsables,
+    tutors,
     appointments,
   } = patient;
 
@@ -98,7 +98,7 @@ const PatientSingleChart = () => {
           {/* Responsabes Infomartion */}
           <div className="chart-responsable-container">
             <h1 className="chart-subtitle">Responsables</h1>
-            <p>Responsable List MAP CARD</p>
+            {tutors}
           </div>
           <div className="chart-division"></div>
           {/* RDV Infomartion */}
