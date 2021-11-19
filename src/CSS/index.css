@@ -269,12 +269,13 @@ a {
   font-size: 0.9rem;
   letter-spacing: 2px;
   color: #b9b9b9;
-  padding: 0.3rem 0rem;
+  padding: 0.5rem 0rem;
+  line-height: 1.7;
 }
 .page .p-separator {
   height: 1px;
-  margin: 2rem auto;
-  width: 65%;
+  margin: 1.8rem auto;
+  width: 75%;
   background: #CA6702;
   opacity: 0.6;
 }
@@ -421,8 +422,69 @@ a {
 }
 
 /* ======================================================================== */
-/* 5. PATIENT Chart Screen */
+/* 5. CHART Patient  */
 /* ======================================================================== */
+.chart-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  color: #BB3E03;
+}
+
+.chart-container {
+  background: #ffffff;
+  box-shadow: 0px 0px 15px #dfdfdfa1;
+}
+
+.chart-division {
+  margin: 1.7rem 0rem;
+  width: 100%;
+  height: 1px;
+  background: #b9b9b9;
+}
+
+.chart-center {
+  padding: 2rem 1.5rem;
+}
+.chart-center .chart-person-container .chart-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.3rem 0.8rem;
+  margin: 0 auto;
+  margin-bottom: 0.45rem;
+  border-radius: 0.25rem;
+  background: #eeeeee98;
+  transition: 0.2s linear all;
+  color: #005F73;
+}
+.chart-center .chart-person-container .chart-row h2 {
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+.chart-center .chart-person-container .chart-row h2 p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+.chart-center .chart-person-container .chart-row h2 .security-true {
+  margin-top: 4%;
+  font-size: 1.3rem;
+}
+.chart-center .chart-person-container .chart-row h2 .security-false {
+  font-size: 2rem;
+}
+.chart-center .chart-person-container .chart-row h2:hover {
+  background: #e0e0e0be;
+}
+.chart-center .chart-responsable-container p {
+  color: #94D2BD;
+}
+.chart-center .chart-rdv-container p {
+  color: #94D2BD;
+}
+
 /* ======================================================================== */
 /* 6. DENTIST Create Screen */
 /* ======================================================================== */

@@ -269,11 +269,12 @@ a
             font-size: 0.9rem
             letter-spacing: 2px
             color: $color-lightgray
-            padding: 0.3rem 0rem
+            padding: 0.5rem 0rem
+            line-height: 1.7
     .p-separator
         height: 1px
-        margin: 2rem auto
-        width: 65%
+        margin: 1.8rem auto
+        width: 75%
         background: $color-orange-dark
         opacity: 0.6
 
@@ -400,8 +401,56 @@ a
             background: $color-lightgray-mid
 
 /* ======================================================================== */
-/* 5. PATIENT Chart Screen */
+/* 5. CHART Patient  */
 /* ======================================================================== */
+.chart-subtitle
+    font-size: 1.25rem
+    margin-bottom: 1rem
+    letter-spacing: 0.5px
+    color: $color-red-light
+.chart-container
+    background: $color-white
+    box-shadow: $shadow-1
+.chart-division
+    margin: 1.7rem 0rem
+    width: 100%
+    height: 1px
+    background: $color-lightgray
+.chart-center
+    padding: 2rem 1.5rem
+    .chart-person-container
+        .chart-row
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+            padding: 0.3rem 0.8rem
+            margin: 0 auto
+            margin-bottom: 0.45rem
+            border-radius: 0.25rem
+            background: $color-lightgray-light
+            transition: $trans-02
+            color: $color-blue-mid
+            h2
+                font-weight: 300
+                font-size: 0.85rem
+                p
+                    font-weight: 500
+                    font-size: 0.9rem
+                    letter-spacing: 0.3px
+                .security-true
+                    margin-top: 4%
+                    font-size: 1.3rem
+                .security-false
+                    font-size: 2rem
+                &:hover
+                    background: $color-lightgray-mid
+    .chart-responsable-container
+        p
+            color: $color-blue-lightest
+    .chart-rdv-container
+        p
+            color: $color-blue-lightest
 
 /* ======================================================================== */
 /* 6. DENTIST Create Screen */
