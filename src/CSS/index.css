@@ -368,6 +368,7 @@ a {
 .mobile-card .card-top .ct-left {
   font-size: 2.6rem;
   color: #9B2226;
+  opacity: 0.9;
 }
 .mobile-card .card-top .ct-right {
   width: 100%;
@@ -380,9 +381,12 @@ a {
 }
 .mobile-card .card-top .ct-right .ctr-info h3 {
   font-size: 0.87rem;
+  color: #001219;
+  letter-spacing: 0.3px;
 }
 .mobile-card .card-top .ct-right .ctr-info p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
   color: #b9b9b9;
 }
 .mobile-card .card-top .ct-right .ctr-chart {
@@ -401,6 +405,7 @@ a {
   border-radius: 0.15rem;
   background: #eeeeee98;
   transition: 0.2s linear all;
+  color: #005F73;
 }
 .mobile-card .card-row h2 {
   font-weight: 300;
