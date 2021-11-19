@@ -443,6 +443,17 @@ a {
   background: #b9b9b9;
 }
 
+.security-true {
+  margin-top: 4%;
+  font-size: 1.3rem;
+}
+
+.security-false {
+  margin-top: 7%;
+  color: #9B2226;
+  font-size: 1.1rem;
+}
+
 .chart-center {
   padding: 2rem 1.5rem;
 }
@@ -467,13 +478,6 @@ a {
   font-weight: 500;
   font-size: 0.9rem;
   letter-spacing: 0.3px;
-}
-.chart-center .chart-person-container .chart-row h2 .security-true {
-  margin-top: 4%;
-  font-size: 1.3rem;
-}
-.chart-center .chart-person-container .chart-row h2 .security-false {
-  font-size: 2rem;
 }
 .chart-center .chart-person-container .chart-row h2:hover {
   background: #e0e0e0be;
