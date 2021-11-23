@@ -134,6 +134,7 @@ a
         .sb-top-close
             color: $color-red-dark
             font-size: 1.7rem
+            cursor: pointer
     .sb-top-account
         width: 82%
         height: 4rem
@@ -404,10 +405,20 @@ a
 /* 5. CHART Patient  */
 /* ======================================================================== */
 .chart-subtitle
-    font-size: 1.25rem
+    display: flex
+    justify-content: space-between
+    align-items: center
     margin-bottom: 1rem
-    letter-spacing: 0.5px
-    color: $color-red-light
+    h1
+        font-size: 1.1rem
+        letter-spacing: 0.5px
+        color: $color-red-light
+    span
+        font-size: 1.35rem
+        color: $color-orange-dark
+        margin-bottom: 1%
+        margin-right: 3%
+        cursor: pointer
 .chart-container
     background: $color-white
     box-shadow: $shadow-1
@@ -423,6 +434,7 @@ a
     margin-top: 7%
     color: $color-red-dark
     font-size: 1.1rem
+
 .chart-center
     padding: 2rem 1.5rem
     .chart-person-container
@@ -447,9 +459,21 @@ a
                     letter-spacing: 0.3px
                 &:hover
                     background: $color-lightgray-mid
-    .chart-responsable-container
-        p
-            color: $color-blue-lightest
+    .chart-tutor-container
+        .chart-tutor-notutor
+            h2
+                font-size: 0.97rem
+                letter-spacing: 0.2px
+                font-weight: 300
+                color: $color-blue-dark
+                margin-bottom: 0.35rem
+            span
+                font-size: 0.92rem
+                letter-spacing: 0.4px
+                font-weight: 500
+                color: $color-blue-mid
+                cursor: pointer
+
     .chart-rdv-container
         p
             color: $color-blue-lightest

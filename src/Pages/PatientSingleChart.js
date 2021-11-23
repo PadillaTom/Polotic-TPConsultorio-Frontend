@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FcOk } from "react-icons/fc";
-import { FaTimes } from "react-icons/fa";
+import { FaTimes, FaRegEdit } from "react-icons/fa";
 
 import { Loading, Error } from "../Components";
 
@@ -54,7 +54,12 @@ const PatientSingleChart = () => {
         <div className="chart-center">
           {/* Personal Infomartion */}
           <div className="chart-person-container">
-            <h1 className="chart-subtitle">Personal Information</h1>
+            <div className="chart-subtitle">
+              <h1>Personal Information</h1>
+              <span>
+                <FaRegEdit></FaRegEdit>
+              </span>
+            </div>
             <div className="chart-row">
               <h2>Name</h2>
               <p>{firstName}</p>
@@ -96,14 +101,27 @@ const PatientSingleChart = () => {
           </div>
           <div className="chart-division"></div>
           {/* Responsabes Infomartion */}
-          <div className="chart-responsable-container">
-            <h1 className="chart-subtitle">Responsables</h1>
-            {tutors}
+          <div className="chart-tutor-container">
+            <div className="chart-subtitle">
+              <h1>Tutors</h1>
+            </div>
+            {tutors.length ? (
+              tutors.map((singleTutor) => {
+                return <h2>Tutor</h2>;
+              })
+            ) : (
+              <div className="chart-tutor-notutor">
+                <h2>There are No Tutors for this patient.</h2>
+                <span>Add New Tutor</span>
+              </div>
+            )}
           </div>
           <div className="chart-division"></div>
           {/* RDV Infomartion */}
           <div className="chart-rdv-container">
-            <h1 className="chart-subtitle">Appointments</h1>
+            <div className="chart-subtitle">
+              <h1>Appointments</h1>
+            </div>
             <p>Map Appointments CARD</p>
           </div>
         </div>
