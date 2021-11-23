@@ -107,6 +107,7 @@ a {
 .sidebar-top .sb-top-logo-close .sb-top-close {
   color: #9B2226;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 .sidebar-top .sb-top-account {
   width: 82%;
@@ -425,10 +426,22 @@ a {
 /* 5. CHART Patient  */
 /* ======================================================================== */
 .chart-subtitle {
-  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1rem;
+}
+.chart-subtitle h1 {
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   color: #BB3E03;
+}
+.chart-subtitle span {
+  font-size: 1.35rem;
+  color: #CA6702;
+  margin-bottom: 1%;
+  margin-right: 3%;
+  cursor: pointer;
 }
 
 .chart-container {
@@ -482,8 +495,19 @@ a {
 .chart-center .chart-person-container .chart-row h2:hover {
   background: #e0e0e0be;
 }
-.chart-center .chart-responsable-container p {
-  color: #94D2BD;
+.chart-center .chart-tutor-container .chart-tutor-notutor h2 {
+  font-size: 0.97rem;
+  letter-spacing: 0.2px;
+  font-weight: 300;
+  color: #001219;
+  margin-bottom: 0.35rem;
+}
+.chart-center .chart-tutor-container .chart-tutor-notutor span {
+  font-size: 0.92rem;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  color: #005F73;
+  cursor: pointer;
 }
 .chart-center .chart-rdv-container p {
   color: #94D2BD;
