@@ -111,7 +111,7 @@ const PatientSingleChart = () => {
               })
             ) : (
               <div className="chart-tutor-notutor">
-                <h2>There are No Tutors for this patient.</h2>
+                <h2>Patient has no Tutors...</h2>
                 <span>Add New Tutor</span>
               </div>
             )}
@@ -122,7 +122,16 @@ const PatientSingleChart = () => {
             <div className="chart-subtitle">
               <h1>Appointments</h1>
             </div>
-            <p>Map Appointments CARD</p>
+            {appointments.length ? (
+              appointments.map((singleAppointment) => {
+                return <h2>Appointment</h2>;
+              })
+            ) : (
+              <div className="chart-tutor-notutor">
+                <h2>Patient has no Appointments...</h2>
+                <span>Add New Appointment</span>
+              </div>
+            )}
           </div>
         </div>
       </div>
